@@ -6,7 +6,7 @@ Client for SoundCloud's API v2
 
 Create a new SoundCloud client.
 
-```
+```javascript
 var client = new SoundCloud({
   access_token: 'oauth-token',
   client_id: 'client-id',
@@ -20,7 +20,7 @@ You can chain multiple functions if they're nested resources.
 
 After calling an HTTP method, you are returned a Promise object.
 
-```
+```javascript
 client
   .tracks({ id: 222053868 })
   .related({ limit: 1 })
@@ -37,32 +37,32 @@ client
 ### API
 
 #### Me
-```
+```javascript
 client
   .me()
 ```
 
 #### Activities
-```
+```javascript
 client
   .activities()
 ```
 
 #### Stream
-```
+```javascript
 client
   .stream({ limit: 5 })
 ```
 
 #### Tracks
 
-```
+```javascript
 client
   .tracks({ id: 222053868 })
 ```
 
 ##### Related
-```
+```javascript
 client
   .tracks({ id: 222053868 })
   .related({ limit: 1 })
